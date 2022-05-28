@@ -1,14 +1,18 @@
 <template>
-  <div class="container">
+  <div class="background">
+    <HeaderObject text="Documentation Project"/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import HeaderObject from './components/HeaderObject'
+
 
 export default {
   name: 'App',
   components: {
+    HeaderObject
   }
 }
 </script>
@@ -30,11 +34,22 @@ body {
   font-family: 'Poppins', 'sans-serif';
 }
 
+#app, body, html {
+  height: 100%;
+}
+
+.background {
+  background-color: gray;
+
+  height: 100%;
+}
+
 .container {
-  background-color:gray;
+  background-color: lightgray;
 
   border-right: 2px outset;
-  border-bottom: 4px outset;
+  border-bottom: 3px outset;
+
   border-radius: 5px;
 
   margin: 10px;
