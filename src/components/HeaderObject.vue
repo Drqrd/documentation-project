@@ -4,11 +4,11 @@
             <h1> {{text}}</h1>
             <ImageLinkObject 
                 link="https://www.linkedin.com/in/justin-k-man/"
-                image="../assets/icon_linked_in.png"
+                :image="icons.mdiLinkedin"
                 />
             <ImageLinkObject 
                 link="https://github.com/Drqrd/"
-                image="../assets/icon_github.png"
+                :image="icons.mdiGithub"
                 />
         </header>
     </div>
@@ -17,18 +17,27 @@
 
 <script>
 import ImageLinkObject from './ImageLinkObject'
+import { mdiLinkedin } from '@mdi/js'; 
+import {mdiGithub } from '@mdi/js'; 
 
 export default {
     name: 'HeaderObject',
     components: {
         ImageLinkObject,
     },
+    data: () => ({
+        icons: {
+            mdiLinkedin,
+            mdiGithub,
+        }
+    }),
     props: {
         text: {
             type: String,
             default: 'Default Header'
         }
     }
+    
 }
 </script>
 
