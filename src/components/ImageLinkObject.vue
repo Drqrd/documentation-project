@@ -1,16 +1,28 @@
 <template>
-    <v-btn icon :href="link"
-        target="_blank">
-        <v-icon>image</v-icon>
-    </v-btn>
+    <a  :href="link"
+        target="_blank"
+    >
+        <img :src="image" :style="isRound ? 
+            {backgroundColor: bgColor, borderRadius:'32px' } : 
+            {backgroundColor: bgColor}"/>
+    </a>
 </template>
 
 <script>
+
     export default {
         name: 'ImageLinkObject',
         props: {
             link: String,
-            image: Object
+            image: String,
+            bgColor: {
+                type: String,
+                default: 'transparent'
+            },
+            isRound: {
+                type: Boolean,
+                default: false
+            }
         },
     }
 </script>
