@@ -2,16 +2,19 @@
     <div class="container">
         <header>
             <h1> {{text}}</h1>
-            <ImageLinkObject 
+            <span>
+                <ImageLinkObject 
                 link="https://www.linkedin.com/in/justin-k-man/"
                 :image="icons.LinkedInIcon"
                 />
-            <ImageLinkObject 
+                <ImageLinkObject 
                 link="https://github.com/Drqrd/"
                 :image="icons.GithubIcon"
                 bgColor='white'
                 isRound=true
                 />
+            </span>
+            
         </header>
     </div>
     
@@ -48,9 +51,4 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-.container {
-    width:100%;
-    }
-
 </style>
