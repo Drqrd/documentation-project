@@ -3,7 +3,7 @@
         target="_blank"
     >
         <img :src="image" :style="isRound ? 
-            {backgroundColor: bgColor, borderRadius:'32px' } : 
+            {backgroundColor: bgColor, borderRadius:'64px' } : 
             {backgroundColor: bgColor}"/>
     </a>
 </template>
@@ -28,5 +28,12 @@
 </script>
 
 <style scoped>
-
+    a, img {
+        margin-left:5px;
+        margin-right:5px;
+    }
+    img {
+        max-height: 64px;
+        max-width: 64px;
+    }
 </style>
