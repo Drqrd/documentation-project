@@ -42,6 +42,8 @@ body {
   background-color: gray;
 
   height: 100%;
+  
+  padding: 10px;
 }
 
 .container {
