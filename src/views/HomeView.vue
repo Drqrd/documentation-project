@@ -1,13 +1,16 @@
 <template>
-    <div>
-        <h1></h1>
-    </div>
+    <NavigationBoxObject></NavigationBoxObject>
 </template>
 
 <script>
+import NavigationBoxObject from '../components/NavigationBoxObject'
+
 
 export default {
-    name:'HomeView'
+    name:'HomeView',
+    components:{
+        NavigationBoxObject,
+    }
 }
 
 </script>
